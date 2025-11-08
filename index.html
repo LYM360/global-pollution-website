@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global Pollution Index</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>Global Pollution Index</h1>
+            </div>
+        </div>
+    </header>
+    <main class="container">
+        <!-- 搜索页（默认显示） -->
+        <section class="search-section" id="searchSection">
+            <h2>Check Pollution Index Worldwide</h2>
+            <p>Get real-time air quality data including PM2.5, PM10 and other pollutants</p>
+
+            <form id="searchForm" class="search-form">
+                <div class="search-box">
+                    <input type="text" name="city" placeholder="Enter city name..." required>
+                    <button type="submit">Search</button>
+                </div>
+            </form>
+
+            <div>
+                <h3>Popular Cities</h3>
+                <div class="city-tags">
+                    <a href="javascript:searchCity('Beijing')">Beijing</a>
+                    <a href="javascript:searchCity('Shanghai')">Shanghai</a>
+                    <a href="javascript:searchCity('New York')">New York</a>
+                    <a href="javascript:searchCity('London')">London</a>
+                    <a href="javascript:searchCity('Paris')">Paris</a>
+                    <a href="javascript:searchCity('Tokyo')">Tokyo</a>
+                    <a href="javascript:searchCity('Sydney')">Sydney</a>
+                    <a href="javascript:searchCity('Singapore')">Singapore</a>
+                </div>
+            </div>
+
+            <div style="margin-top: 2rem;">
+                <h3>Air Quality Index Guide</h3>
+                <div class="index-guide">
+                    <div class="index-item green"><span>0-50</span><p>Good</p></div>
+                    <div class="index-item yellow"><span>51-100</span><p>Moderate</p></div>
+                    <div class="index-item orange"><span>101-150</span><p>Unhealthy for Sensitive Groups</p></div>
+                    <div class="index-item red"><span>151-200</span><p>Unhealthy</p></div>
+                    <div class="index-item purple"><span>201-300</span><p>Very Unhealthy</p></div>
+                    <div class="index-item maroon"><span>301+</span><p>Hazardous</p></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 结果页（默认隐藏） -->
+        <section class="results-header" id="resultsSection" style="display: none;">
+            <div class="back-link"><a href="javascript:backToSearch()">← Back to search</a></div>
+            <div id="resultsContent"></div>
+        </section>
+    </main>
+    <footer>
+        <div class="container">
+            <p>© 2023 Global Pollution Index | Data for reference only</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
